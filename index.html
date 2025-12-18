@@ -1,16 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Latihan Excel Bimbel TEVA</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: linear-gradient(135deg, #0f3d2e, #1f7a5a, #4caf7a);
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(10px);
+      border-radius: 18px;
+      padding: 32px 36px;
+      max-width: 520px;
+      width: 90%;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 2rem;
+      text-align: center;
+      color: #e6fff3;
+    }
+
+    p {
+      text-align: center;
+      color: #d9f7ea;
+      margin-bottom: 28px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 16px;
+    }
+
+    a.download {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+      background: linear-gradient(135deg, #2ecc71, #27ae60);
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 14px;
+      font-weight: 600;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    }
+
+    a.download:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 28px rgba(0,0,0,0.35);
+    }
+
+    .badge {
+      background: rgba(255,255,255,0.25);
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+    }
+
+    footer {
+      margin-top: 26px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #c9f2e0;
+    }
+  </style>
 </head>
 <body>
-  <h1>Latihan Excel Bimbel TEVA</h1>
-  <p>Pilih latihan sesuai pertemuan:</p>
+  <div class="container">
+    <h1>📊 Latihan Excel<br>Bimbel TEVA</h1>
+    <p>Pilih dan unduh latihan Excel sesuai pertemuan</p>
 
-  <ul>
-    <li><a href="Latihan_P1_RumusDasar_1_Terbimbing.xlsx">Download Latihan P1 - RUMUS DASAR</a></li>
-  </ul>
+    <ul>
+      <li>
+        <a class="download" href="Latihan_P1_RumusDasar_1_Terbimbing.xlsx">
+          <span>Pertemuan 1 – Rumus Dasar</span>
+          <span class="badge">XLSX</span>
+        </a>
+      </li>
+    </ul>
 
-  <p>Nama: ____________ | Kelas: ____________</p>
+    <footer>
+      © 2025 Bimbel TEVA • Belajar Excel Jadi Mudah
+    </footer>
+  </div>
 </body>
 </html>
