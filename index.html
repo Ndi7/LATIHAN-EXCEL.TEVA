@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Latihan Excel Bimbel TEVA</title>
+
   <style>
     body {
       margin: 0;
@@ -12,53 +13,72 @@
       color: #ffffff;
       min-height: 100vh;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
     }
 
     .container {
-      background: rgba(255, 255, 255, 0.12);
-      backdrop-filter: blur(10px);
-      border-radius: 18px;
-      padding: 32px 36px;
-      max-width: 640px;
       width: 92%;
+      max-width: 680px;
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(10px);
+      padding: 32px;
+      border-radius: 18px;
       box-shadow: 0 20px 40px rgba(0,0,0,0.25);
     }
 
     h1 {
-      margin-top: 0;
-      font-size: 2rem;
       text-align: center;
+      margin-top: 0;
       color: #e6fff3;
     }
 
     p {
       text-align: center;
       color: #d9f7ea;
-      margin-bottom: 28px;
+      margin-bottom: 26px;
     }
 
-    .section {
-      margin-bottom: 28px;
-      padding: 20px;
-      border-radius: 14px;
-      background: rgba(255,255,255,0.1);
+    /* CARD */
+    .card {
+      background: rgba(255,255,255,0.15);
+      border-radius: 16px;
+      margin-bottom: 18px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
     }
 
-    .section h2 {
-      margin-top: 0;
-      margin-bottom: 14px;
+    .card-header {
+      padding: 18px 22px;
+      cursor: pointer;
+      font-size: 1.3rem;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(135deg, #2ecc71, #27ae60);
+    }
+
+    .card-header span {
       font-size: 1.4rem;
-      color: #b9ffe4;
-      text-align: center;
+    }
+
+    .card-content {
+      display: none;
+      padding: 20px 22px;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
     }
 
     .empty {
       text-align: center;
       font-style: italic;
       color: #e0fff2;
-      padding: 18px 0;
+      padding: 14px 0;
     }
 
     ul {
@@ -68,26 +88,25 @@
     }
 
     li {
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
     a.download {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      padding: 16px 20px;
-      background: linear-gradient(135deg, #2ecc71, #27ae60);
-      color: #ffffff;
-      text-decoration: none;
+      align-items: center;
+      padding: 14px 18px;
+      background: linear-gradient(135deg, #3ddc84, #27ae60);
       border-radius: 14px;
+      text-decoration: none;
+      color: #ffffff;
       font-weight: 600;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+      transition: transform 0.2s ease;
     }
 
     a.download:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 14px 28px rgba(0,0,0,0.35);
+      transform: translateY(-2px);
     }
 
     .badge {
@@ -98,88 +117,59 @@
     }
 
     footer {
-      margin-top: 24px;
+      margin-top: 22px;
       text-align: center;
       font-size: 0.85rem;
       color: #c9f2e0;
     }
   </style>
 </head>
+
 <body>
   <div class="container">
     <h1>📊 Latihan Excel<br>Bimbel TEVA</h1>
-    <p>Pilih latihan sesuai jenjang</p>
+    <p>Klik jenjang untuk melihat latihan</p>
 
-    <!-- SD -->
-    <div class="section">
-      <h2>📘 SD</h2>
-      <div class="empty">Belum ada Latihan</div>
+    <!-- CARD SD -->
+    <div class="card">
+      <div class="card-header" onclick="toggleCard('sd')">
+        📘 SD
+        <span>▼</span>
+      </div>
+      <div class="card-content" id="sd">
+        <div class="empty">Belum ada Latihan</div>
+      </div>
     </div>
 
-    <!-- SMP / SMA / SMK -->
-    <div class="section">
-      <h2>📗 SMP / SMA / SMK</h2>
-      <ul>
-        <li>
-          <a class="download" href="Latihan_P1_RumusDasar_1_Terbimbing.xlsx">
-            <span>Pertemuan 1 – Rumus Dasar</span>
-            <span class="badge">XLSX</span>
-          </a>
-        </li>
-        <li>
-          <a class="download" href="Latihan_P2_RumusDasar_2.xlsx">
-            <span>Pertemuan 2 – Rumus Dasar</span>
-            <span class="badge">XLSX</span>
-          </a>
-        </li>
-        <li>
-          <a class="download" href="Latihan_P3_RumusDasar_3.xlsx">
-            <span>Pertemuan 3 – Rumus Dasar</span>
-            <span class="badge">XLSX</span>
-          </a>
-        </li>
-        <li>
-          <a class="download" href="Latihan_P4_RumusDasar_MIX_1.xlsx">
-            <span>Pertemuan 4 – Rumus Dasar</span>
-            <span class="badge">XLSX</span>
-          </a>
-        </li>
-        <li>
-          <a class="download" href="Latihan_P5_RumusDasar_MIX_2.xlsx">
-            <span>Pertemuan 5 – Rumus Dasar</span>
-            <span class="badge">XLSX</span>
-          </a>
-        </li>
-        <li>
-          <a class="download" href="Latihan_P6_RumusDasar_MIX_3.xlsx">
-            <span>Pertemuan 6 – Rumus Dasar</span>
-            <span class="badge">XLSX</span>
-          </a>
-        </li>
-        <li>
-          <a class="download" href="Latihan_P7_Logika_IFtunggal_1.xlsx">
-            <span>Pertemuan 7 – Logika IF Tunggal</span>
-            <span class="badge">XLSX</span>
-          </a>
-        </li>
-        <li>
-          <a class="download" href="Latihan_P8_Logika_IFtunggal_2.xlsx">
-            <span>Pertemuan 8 – Logika IF Tunggal</span>
-            <span class="badge">XLSX</span>
-          </a>
-        </li>
-        <li>
-          <a class="download" href="Latihan_P9_Logika_IFtunggal_3.xlsx">
-            <span>Pertemuan 9 – Logika IF Tunggal</span>
-            <span class="badge">XLSX</span>
-          </a>
-        </li>
-      </ul>
+    <!-- CARD SMP/A/K -->
+    <div class="card">
+      <div class="card-header" onclick="toggleCard('smp')">
+        📗 SMP / SMA / SMK
+        <span>▼</span>
+      </div>
+      <div class="card-content" id="smp">
+        <ul>
+          <li><a class="download" href="Latihan_P1_RumusDasar_1_Terbimbing.xlsx"><span>Pertemuan 1 – Rumus Dasar</span><span class="badge">XLSX</span></a></li>
+          <li><a class="download" href="Latihan_P2_RumusDasar_2.xlsx"><span>Pertemuan 2 – Rumus Dasar</span><span class="badge">XLSX</span></a></li>
+          <li><a class="download" href="Latihan_P3_RumusDasar_3.xlsx"><span>Pertemuan 3 – Rumus Dasar</span><span class="badge">XLSX</span></a></li>
+          <li><a class="download" href="Latihan_P4_RumusDasar_MIX_1.xlsx"><span>Pertemuan 4 – Rumus Dasar</span><span class="badge">XLSX</span></a></li>
+          <li><a class="download" href="Latihan_P5_RumusDasar_MIX_2.xlsx"><span>Pertemuan 5 – Rumus Dasar</span><span class="badge">XLSX</span></a></li>
+          <li><a class="download" href="Latihan_P6_RumusDasar_MIX_3.xlsx"><span>Pertemuan 6 – Rumus Dasar</span><span class="badge">XLSX</span></a></li>
+          <li><a class="download" href="Latihan_P7_Logika_IFtunggal_1.xlsx"><span>Pertemuan 7 – Logika IF Tunggal</span><span class="badge">XLSX</span></a></li>
+          <li><a class="download" href="Latihan_P8_Logika_IFtunggal_2.xlsx"><span>Pertemuan 8 – Logika IF Tunggal</span><span class="badge">XLSX</span></a></li>
+          <li><a class="download" href="Latihan_P9_Logika_IFtunggal_3.xlsx"><span>Pertemuan 9 – Logika IF Tunggal</span><span class="badge">XLSX</span></a></li>
+        </ul>
+      </div>
     </div>
 
-    <footer>
-      © 2025 Bimbel TEVA • Belajar Excel Jadi Mudah
-    </footer>
+    <footer>© 2025 Bimbel TEVA • Belajar Excel Jadi Mudah</footer>
   </div>
+
+  <script>
+    function toggleCard(id) {
+      const content = document.getElementById(id);
+      content.style.display = content.style.display === "block" ? "none" : "block";
+    }
+  </script>
 </body>
 </html>
