@@ -21,8 +21,8 @@
       backdrop-filter: blur(10px);
       border-radius: 18px;
       padding: 32px 36px;
-      max-width: 520px;
-      width: 90%;
+      max-width: 640px;
+      width: 92%;
       box-shadow: 0 20px 40px rgba(0,0,0,0.25);
     }
 
@@ -37,6 +37,28 @@
       text-align: center;
       color: #d9f7ea;
       margin-bottom: 28px;
+    }
+
+    .section {
+      margin-bottom: 28px;
+      padding: 20px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.1);
+    }
+
+    .section h2 {
+      margin-top: 0;
+      margin-bottom: 14px;
+      font-size: 1.4rem;
+      color: #b9ffe4;
+      text-align: center;
+    }
+
+    .empty {
+      text-align: center;
+      font-style: italic;
+      color: #e0fff2;
+      padding: 18px 0;
     }
 
     ul {
@@ -76,7 +98,7 @@
     }
 
     footer {
-      margin-top: 26px;
+      margin-top: 24px;
       text-align: center;
       font-size: 0.85rem;
       color: #c9f2e0;
@@ -86,72 +108,74 @@
 <body>
   <div class="container">
     <h1>📊 Latihan Excel<br>Bimbel TEVA</h1>
-    <p>Pilih dan unduh latihan Excel sesuai pertemuan</p>
+    <p>Pilih latihan sesuai jenjang</p>
 
-    <ul>
-      <li>
-        <a class="download" href="Latihan_P1_RumusDasar_1_Terbimbing.xlsx">
-          <span>Pertemuan 1 – Rumus Dasar</span>
-          <span class="badge">XLSX</span>
-        </a>
-      </li>
+    <!-- SD -->
+    <div class="section">
+      <h2>📘 SD</h2>
+      <div class="empty">Belum ada Latihan</div>
+    </div>
 
-      <li>
-        <a class="download" href="Latihan_P2_RumusDasar_2.xlsx">
-          <span>Pertemuan 2 – Rumus Dasar</span>
-          <span class="badge">XLSX</span>
-        </a>
-      </li>
-
-      <li>
-        <a class="download" href="Latihan_P3_RumusDasar_3.xlsx">
-          <span>Pertemuan 3 – Rumus Dasar</span>
-          <span class="badge">XLSX</span>
-        </a>
-      </li>
-
-      <li>
-        <a class="download" href="Latihan_P4_RumusDasar_MIX_1.xlsx">
-          <span>Pertemuan 4 – Rumus Dasar</span>
-          <span class="badge">XLSX</span>
-        </a>
-      </li>
-
-      <li>
-        <a class="download" href="Latihan_P5_RumusDasar_MIX_2.xlsx">
-          <span>Pertemuan 5 – Rumus Dasar</span>
-          <span class="badge">XLSX</span>
-        </a>
-      </li>
-
-      <li>
-        <a class="download" href="Latihan_P6_RumusDasar_MIX_3.xlsx">
-          <span>Pertemuan 6 – Rumus Dasar</span>
-          <span class="badge">XLSX</span>
-        </a>
-      </li>
-
-      <li>
-        <a class="download" href="Latihan_P7_Logika_IFtunggal_1.xlsx">
-          <span>Pertemuan 7 – Logika iF TUNGGAL</span>
-          <span class="badge">XLSX</span>
-        </a>
-      </li>
-
-      <li>
-        <a class="download" href="Latihan_P8_Logika_IFtunggal_2.xlsx">
-          <span>Pertemuan 8 – Logika iF TUNGGAL</span>
-          <span class="badge">XLSX</span>
-        </a>
-      </li>
-
-      <li>
-        <a class="download" href="Latihan_P9_Logika_IFtunggal_3.xlsx">
-          <span>Pertemuan 9 – Logika iF TUNGGAL</span>
-          <span class="badge">XLSX</span>
-        </a>
-      </li>
-    </ul>
+    <!-- SMP / SMA / SMK -->
+    <div class="section">
+      <h2>📗 SMP / SMA / SMK</h2>
+      <ul>
+        <li>
+          <a class="download" href="Latihan_P1_RumusDasar_1_Terbimbing.xlsx">
+            <span>Pertemuan 1 – Rumus Dasar</span>
+            <span class="badge">XLSX</span>
+          </a>
+        </li>
+        <li>
+          <a class="download" href="Latihan_P2_RumusDasar_2.xlsx">
+            <span>Pertemuan 2 – Rumus Dasar</span>
+            <span class="badge">XLSX</span>
+          </a>
+        </li>
+        <li>
+          <a class="download" href="Latihan_P3_RumusDasar_3.xlsx">
+            <span>Pertemuan 3 – Rumus Dasar</span>
+            <span class="badge">XLSX</span>
+          </a>
+        </li>
+        <li>
+          <a class="download" href="Latihan_P4_RumusDasar_MIX_1.xlsx">
+            <span>Pertemuan 4 – Rumus Dasar</span>
+            <span class="badge">XLSX</span>
+          </a>
+        </li>
+        <li>
+          <a class="download" href="Latihan_P5_RumusDasar_MIX_2.xlsx">
+            <span>Pertemuan 5 – Rumus Dasar</span>
+            <span class="badge">XLSX</span>
+          </a>
+        </li>
+        <li>
+          <a class="download" href="Latihan_P6_RumusDasar_MIX_3.xlsx">
+            <span>Pertemuan 6 – Rumus Dasar</span>
+            <span class="badge">XLSX</span>
+          </a>
+        </li>
+        <li>
+          <a class="download" href="Latihan_P7_Logika_IFtunggal_1.xlsx">
+            <span>Pertemuan 7 – Logika IF Tunggal</span>
+            <span class="badge">XLSX</span>
+          </a>
+        </li>
+        <li>
+          <a class="download" href="Latihan_P8_Logika_IFtunggal_2.xlsx">
+            <span>Pertemuan 8 – Logika IF Tunggal</span>
+            <span class="badge">XLSX</span>
+          </a>
+        </li>
+        <li>
+          <a class="download" href="Latihan_P9_Logika_IFtunggal_3.xlsx">
+            <span>Pertemuan 9 – Logika IF Tunggal</span>
+            <span class="badge">XLSX</span>
+          </a>
+        </li>
+      </ul>
+    </div>
 
     <footer>
       © 2025 Bimbel TEVA • Belajar Excel Jadi Mudah
