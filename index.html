@@ -13,17 +13,17 @@
       color: #ffffff;
       min-height: 100vh;
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
     }
 
     .container {
       width: 92%;
-      max-width: 680px;
+      max-width: 700px;
       background: rgba(255,255,255,0.12);
       backdrop-filter: blur(10px);
-      padding: 32px;
       border-radius: 18px;
+      padding: 32px;
       box-shadow: 0 20px 40px rgba(0,0,0,0.25);
     }
 
@@ -36,91 +36,52 @@
     p {
       text-align: center;
       color: #d9f7ea;
-      margin-bottom: 26px;
+      margin-bottom: 30px;
     }
 
-    /* CARD */
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
     .card {
-      background: rgba(255,255,255,0.15);
-      border-radius: 16px;
-      margin-bottom: 18px;
-      overflow: hidden;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
-    }
-
-    .card-header {
-      padding: 18px 22px;
-      cursor: pointer;
-      font-size: 1.3rem;
-      font-weight: 600;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: linear-gradient(135deg, #2ecc71, #27ae60);
-    }
-
-    .card-header span {
-      font-size: 1.4rem;
-    }
-
-    .card-content {
-      display: none;
-      padding: 20px 22px;
-      animation: fadeIn 0.3s ease;
-    }
-
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
-
-    .empty {
-      text-align: center;
-      font-style: italic;
-      color: #e0fff2;
-      padding: 14px 0;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    li {
-      margin-bottom: 14px;
-    }
-
-    a.download {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 14px 18px;
-      background: linear-gradient(135deg, #3ddc84, #27ae60);
-      border-radius: 14px;
       text-decoration: none;
       color: #ffffff;
-      font-weight: 600;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.25);
-      transition: transform 0.2s ease;
+      background: linear-gradient(135deg, #2ecc71, #27ae60);
+      border-radius: 18px;
+      padding: 36px 20px;
+      text-align: center;
+      font-size: 1.6rem;
+      font-weight: 700;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
-    a.download:hover {
-      transform: translateY(-2px);
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 22px 44px rgba(0,0,0,0.4);
     }
 
-    .badge {
-      background: rgba(255,255,255,0.25);
-      padding: 4px 10px;
-      border-radius: 999px;
-      font-size: 0.8rem;
+    .card span {
+      display: block;
+      font-size: 1rem;
+      font-weight: 400;
+      margin-top: 10px;
+      color: #eafff5;
     }
 
     footer {
-      margin-top: 22px;
+      margin-top: 28px;
       text-align: center;
       font-size: 0.85rem;
       color: #c9f2e0;
+    }
+
+    @media (max-width: 640px) {
+      .cards {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -128,48 +89,21 @@
 <body>
   <div class="container">
     <h1>📊 Latihan Excel<br>Bimbel TEVA</h1>
-    <p>Klik jenjang untuk melihat latihan</p>
+    <p>Pilih jenjang untuk masuk ke latihan</p>
 
-    <!-- CARD SD -->
-    <div class="card">
-      <div class="card-header" onclick="toggleCard('sd')">
+    <div class="cards">
+      <a href="sd.html" class="card">
         📘 SD
-        <span>▼</span>
-      </div>
-      <div class="card-content" id="sd">
-        <div class="empty">Belum ada Latihan</div>
-      </div>
-    </div>
+        <span>Latihan Excel SD</span>
+      </a>
 
-    <!-- CARD SMP/A/K -->
-    <div class="card">
-      <div class="card-header" onclick="toggleCard('smp')">
+      <a href="smp.html" class="card">
         📗 SMP / SMA / SMK
-        <span>▼</span>
-      </div>
-      <div class="card-content" id="smp">
-        <ul>
-          <li><a class="download" href="Latihan_P1_RumusDasar_1_Terbimbing.xlsx"><span>Pertemuan 1 – Rumus Dasar</span><span class="badge">XLSX</span></a></li>
-          <li><a class="download" href="Latihan_P2_RumusDasar_2.xlsx"><span>Pertemuan 2 – Rumus Dasar</span><span class="badge">XLSX</span></a></li>
-          <li><a class="download" href="Latihan_P3_RumusDasar_3.xlsx"><span>Pertemuan 3 – Rumus Dasar</span><span class="badge">XLSX</span></a></li>
-          <li><a class="download" href="Latihan_P4_RumusDasar_MIX_1.xlsx"><span>Pertemuan 4 – Rumus Dasar</span><span class="badge">XLSX</span></a></li>
-          <li><a class="download" href="Latihan_P5_RumusDasar_MIX_2.xlsx"><span>Pertemuan 5 – Rumus Dasar</span><span class="badge">XLSX</span></a></li>
-          <li><a class="download" href="Latihan_P6_RumusDasar_MIX_3.xlsx"><span>Pertemuan 6 – Rumus Dasar</span><span class="badge">XLSX</span></a></li>
-          <li><a class="download" href="Latihan_P7_Logika_IFtunggal_1.xlsx"><span>Pertemuan 7 – Logika IF Tunggal</span><span class="badge">XLSX</span></a></li>
-          <li><a class="download" href="Latihan_P8_Logika_IFtunggal_2.xlsx"><span>Pertemuan 8 – Logika IF Tunggal</span><span class="badge">XLSX</span></a></li>
-          <li><a class="download" href="Latihan_P9_Logika_IFtunggal_3.xlsx"><span>Pertemuan 9 – Logika IF Tunggal</span><span class="badge">XLSX</span></a></li>
-        </ul>
-      </div>
+        <span>Latihan Excel Lanjutan</span>
+      </a>
     </div>
 
-    <footer>© 2025 Bimbel TEVA • Belajar Excel Jadi Mudah</footer>
+    <footer>© 2025 Bimbel TEVA</footer>
   </div>
-
-  <script>
-    function toggleCard(id) {
-      const content = document.getElementById(id);
-      content.style.display = content.style.display === "block" ? "none" : "block";
-    }
-  </script>
 </body>
 </html>
