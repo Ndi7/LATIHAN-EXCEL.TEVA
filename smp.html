@@ -22,8 +22,8 @@
       backdrop-filter: blur(10px);
       border-radius: 18px;
       padding: 32px;
-      max-width: 520px;
-      width: 92%;
+      max-width: 900px;
+      width: 94%;
       box-shadow: 0 20px 40px rgba(0,0,0,0.25);
     }
 
@@ -35,46 +35,68 @@
     p {
       text-align: center;
       color: #d9f7ea;
-      margin-bottom: 24px;
+      margin-bottom: 28px;
     }
 
+    /* ===== GRID CARD ===== */
     ul {
       list-style: none;
       padding: 0;
       margin: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
     }
 
     li {
-      margin-bottom: 14px;
+      margin: 0;
     }
 
+    /* ===== CARD ===== */
     a.download {
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
-      align-items: center;
-      padding: 16px 20px;
+      gap: 10px;
+      padding: 16px;
+      min-height: 110px;
       background: linear-gradient(135deg, #2ecc71, #27ae60);
       border-radius: 14px;
       text-decoration: none;
       color: #ffffff;
       font-weight: 600;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    a.download:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 26px rgba(0,0,0,0.35);
     }
 
     .badge {
+      align-self: center;
       background: rgba(255,255,255,0.25);
-      padding: 4px 10px;
+      padding: 4px 12px;
       border-radius: 999px;
-      font-size: 0.8rem;
+      font-size: 0.75rem;
     }
 
     .back {
       display: block;
       text-align: center;
-      margin-top: 22px;
+      margin-top: 28px;
       color: #b9ffe4;
       text-decoration: none;
       font-weight: 600;
+    }
+
+    /* ===== LAPTOP ===== */
+    @media (min-width: 1024px) {
+      ul {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
   </style>
 </head>
@@ -98,14 +120,14 @@
       <li><a class="download" href="Latihan_P11_Logika_IFmajemuk_1.xlsx"><span>Pertemuan 11 – Logika IF Majemuk</span><span class="badge">XLSX</span></a></li>
       <li><a class="download" href="Latihan_P12_Logika_IFmajemuk_2.xlsx"><span>Pertemuan 12 – Logika IF Majemuk</span><span class="badge">XLSX</span></a></li>
       <li><a class="download" href="Latihan_P13_Logika_IFmajemuk_3.xlsx"><span>Pertemuan 13 – Logika IF Majemuk</span><span class="badge">XLSX</span></a></li>
-      <li><a class="download" href="Latihan_P14_Logika_IF_AND_1.xlsx"><span>Pertemuan 14 – Logika IF_AND</span><span class="badge">XLSX</span></a></li>
-      <li><a class="download" href="Latihan_P15_Logika_IF_AND_2.xlsx"><span>Pertemuan 15 – Logika IF_AND</span><span class="badge">XLSX</span></a></li>
-      <li><a class="download" href="Latihan_P16_Logika_IF_AND_3.xlsx"><span>Pertemuan 16 – Logika IF_AND</span><span class="badge">XLSX</span></a></li>
-      <li><a class="download" href="Latihan_P17_Logika_IF_OR_1.xlsx"><span>Pertemuan 17 – Logika IF_OR</span><span class="badge">XLSX</span></a></li>
-      <li><a class="download" href="Latihan_P18_Logika_IF_OR_2.xlsx"><span>Pertemuan 18 – Logika IF_OR</span><span class="badge">XLSX</span></a></li>
-      <li><a class="download" href="Latihan_P19_Logika_IF_OR_3.xlsx"><span>Pertemuan 19 – Logika IF_OR</span><span class="badge">XLSX</span></a></li>
+      <li><a class="download" href="Latihan_P14_Logika_IF_AND_1.xlsx"><span>Pertemuan 14 – Logika IF AND</span><span class="badge">XLSX</span></a></li>
+      <li><a class="download" href="Latihan_P15_Logika_IF_AND_2.xlsx"><span>Pertemuan 15 – Logika IF AND</span><span class="badge">XLSX</span></a></li>
+      <li><a class="download" href="Latihan_P16_Logika_IF_AND_3.xlsx"><span>Pertemuan 16 – Logika IF AND</span><span class="badge">XLSX</span></a></li>
+      <li><a class="download" href="Latihan_P17_Logika_IF_OR_1.xlsx"><span>Pertemuan 17 – Logika IF OR</span><span class="badge">XLSX</span></a></li>
+      <li><a class="download" href="Latihan_P18_Logika_IF_OR_2.xlsx"><span>Pertemuan 18 – Logika IF OR</span><span class="badge">XLSX</span></a></li>
+      <li><a class="download" href="Latihan_P19_Logika_IF_OR_3.xlsx"><span>Pertemuan 19 – Logika IF OR</span><span class="badge">XLSX</span></a></li>
       <li><a class="download" href="Latihan_P20_Logika_IF_AND_OR_4.xlsx"><span>Pertemuan 20 – Logika IF AND/OR</span><span class="badge">XLSX</span></a></li>
-      <li><a class="download" href="Latihan_P21_Fungsi TEXT(LEFT,MID,RIGHT)_1.xlsx"><span>Pertemuan 21 – FUNGSI TEXT</span><span class="badge">XLSX</span></a></li>
+      <li><a class="download" href="Latihan_P21_Fungsi_TEXT.xlsx"><span>Pertemuan 21 – Fungsi TEXT</span><span class="badge">XLSX</span></a></li>
     </ul>
 
     <a class="back" href="index.html">← Kembali ke Menu Utama</a>
